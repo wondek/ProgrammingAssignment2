@@ -25,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## given the list variable from the first function, will first check to see if there's already a cached inverse and return
+## given the list variable from the first function, will first check to see if there is already a cached inverse and return
 ## otherwise will attempt to solve its inverse and set/return it
 
 cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) { ##special matrix provided or create a test 2x2 matrix
