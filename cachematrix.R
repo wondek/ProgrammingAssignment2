@@ -30,7 +30,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) { ##special matrix provided or create a test 2x2 matrix
   
-  ## let's see if there's something there already
+  ## let's see if there is something there already
   calculatedInverse <- x$getInverse() 
   
   ##check if there's a cached value AND it's a matrix
@@ -39,7 +39,7 @@ cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) { ##special 
     return(calculatedInverse)
   }
   
-  ## otherwise get the matrix
+  ## else get the matrix
   matrixToSolve <- x$get()  
   
   ## try to solve the matrix and catch errors and warnings
@@ -54,7 +54,7 @@ cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) { ##special 
     message("\n")
   })
   
-  ## whatever the case, set the value of the inverse (NULL if something went wrong)
+  ## whatever the case, set the value of the inverse to calculated value (NULL if something went wrong)
   message("Setting the value of inverse to:") 
   x$setInverse(calculatedInverse)
 }
